@@ -1,0 +1,14 @@
+{
+    "name": "marekhrabe/rideshare-importer",
+    "authors": [
+        {
+            "name": "Marek Hrabe",
+            "email": "marekhrabe@me.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "wp-coding-standards/wpcs": "^2.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+    }
+}
