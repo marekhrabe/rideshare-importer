@@ -183,14 +183,14 @@ class RideShare_Import {
 		$post_content .= '<ul>';
 		$post_content .= '<li>' . esc_html(
 			sprintf(
-			/* translators: Full address of pickup. */
+			/* translators: %s: Full address of pickup. */
 				__( 'Pickup: %s', 'rideshare-importer' ),
 				$trip['begintripFormattedAddress']
 			)
 		) . '</li>';
 		$post_content .= '<li>' . esc_html(
 			sprintf(
-			/* translators: Full address of dropoff. */
+			/* translators: %s: Full address of dropoff. */
 				__( 'Dropoff: %s', 'rideshare-importer' ),
 				$trip['dropoffFormattedAddress']
 			)
@@ -271,7 +271,7 @@ class RideShare_Import {
 		// Assign driver profile using People & Places plugin, if present.
 		if ( ! empty( $trip['driver'] ) && class_exists( 'People_Places' ) ) {
 			$driver = array(
-				/* translators: Format the first name of the driver. */
+				/* translators: %s: first name of the driver. */
 				'name' => sprintf( __( 'Driver %s', 'rideshare-importer' ), $trip['driver'] ),
 			);
 			\People_Places::add_person_to_post( 'uber', $trip['driverUUID'], $driver, $post_id );
@@ -321,7 +321,7 @@ class RideShare_Import {
 			$this->process_trip( $trip );
 
 			echo '<li>';
-			/* translators: displays trip id */
+			/* translators: %s: trip id */
 			printf( esc_html__( 'Importing %s.', 'rideshare-importer' ), esc_html( $trip['uuid'] ) );
 		}
 
