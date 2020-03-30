@@ -176,7 +176,7 @@ class RideShare_Import {
 
 		// Add map image if present.
 		if ( ! empty( $trip['tripMap']['url'] ) ) {
-			$post_content .= '<img src="' . esc_attr( $trip['tripMap']['url'] ) . '">';
+			$post_content .= '<img src="' . esc_url( $trip['tripMap']['url'] ) . '">';
 		}
 
 		// Format addresses.
